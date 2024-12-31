@@ -1,0 +1,46 @@
+.card {
+    word-wrap: break-word; /* Перенос слов */
+    overflow-wrap: break-word; /* Совместимость с современными браузерами */
+    word-break: break-word; /* Совместимость для агрессивного переноса */
+}
+
+.channel-card-container,
+.post-card-container,
+.channel-header-container,
+.custom-card {
+    flex: 0 1 100%; /* Запрещаем растягивание, но разрешаем уменьшение */
+    max-width: 1000px; /* Максимальная ширина 1000px */
+    width: 100%; /* Ширина по умолчанию будет 100% от родительского контейнера */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.channel-card-container:hover,
+.post-card-container:hover,
+.channel-header-container:hover,
+.custom-card:hover {
+    transform: translateY(-5px); /* Смещение вверх */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+    overflow: hidden;
+    resize: none;
+    box-sizing: border-box;
+}class="mw-100" style="width: 500px" enctype="multipart/form-data"
+
+form {
+    display: d-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content-center;
+    max-width: 100%;
+    width: 500px;
+}
+
+.custom-card {
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+}

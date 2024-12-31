@@ -1,0 +1,12 @@
+{% if post.quiz %}
+<div class="card custom-card mt-5">
+	<ul class="list-group list-group-flush">
+		<a
+			href="{% url 'quiz:quiz_question' post.quiz.url %}"
+			class="m-3"
+		>
+			Выполнить тест
+		</a>
+	</ul>
+</div>
+{% endif %}

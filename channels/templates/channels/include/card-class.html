@@ -1,0 +1,5 @@
+{% if user == channel.created_by %}
+	border-primary
+{% elif user in channel.participants.all %}
+	border-success
+{% endif %}

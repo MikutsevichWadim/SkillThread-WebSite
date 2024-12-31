@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<h1>{{object.username}}</h1>
+<div class="card custom-card">
+	<div class="body">
+		<p>
+			<h2 align="center">
+				{{object.last_name|default:'<span class="fs-3 fw-bold opacity-50">Имя не указано</span>'}}
+				{{object.first_name|default:'<span class="fs-3 fw-bold opacity-50">Фамилия не указана</span>'}}
+			</h2>
+		</p>
+	</div>
+	{% if request.user == object %}
+	<div class="card-footer d-flex justify-content-center gap-1">
+		{% include 'users/include/update-profile-button.html' %}
+		{% include 'users/include/change-password-button.html' %}
+	</div>
+	{% endif %}
+</div>
+{% endblock %}

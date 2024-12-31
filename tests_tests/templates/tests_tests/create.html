@@ -1,0 +1,28 @@
+{% extends 'app/base.html' %}
+
+{% load app_tags %}
+{% load static %}
+
+{% block content %}
+{% show_form_header 'Создание нового теста' %}
+		<div class="mb-3">
+			<label for="testTitle" class="form-label">Название теста</label>
+			<input type="text" class="form-control" id="testTitle" name="testTitle" placeholder="Введите название" required>
+		</div>
+
+		<div class="mb-3">
+			<label for="testDescription" class="form-label">Описание теста</label>
+			<textarea class="form-control" id="testDescription" name="testDescription" rows="3" placeholder="Введите описание"></textarea>
+		</div>
+
+		<div id="questionsContainer" class="mb-4">
+			<h5>Вопросы</h5>
+		</div>
+
+		<button type="button" class="btn btn-primary mb-3" id="addQuestion">Добавить вопрос</button>
+{% show_form_footer 'Сохранить тест' %}
+
+{% include 'tests_questions/include/question.html' %}
+<script src="{% static 'tests_tests/js/create-test.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+{% if channel.created_by == user %}
+	<a href="{% url 'channels:control' channel.pk %}" class="card-link btn btn-primary">
+		Управление каналом
+	</a>
+{% endif %}

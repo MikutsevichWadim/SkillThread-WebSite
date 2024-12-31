@@ -1,0 +1,29 @@
+{% load static %}
+{% load app_tags %}
+{% load posts_tags %}
+
+<a href="{{ post.get_absolute_url }}" class="d-inline-block mb-3 post-card-container">
+	<div class="card">
+		<div class="card-header d-flex justify-content-between">
+			<h5 class="card-title">
+				{{ post.title|truncatechars:50 }}
+			</h5>
+			{% show_post_icon post 25 %}
+		</div>
+		<div class="d-flex flex-row justify-content-start p-3">
+			<div class="card-body">
+				<p class="card-text">
+					{{ post.content|truncatechars_html:200|safe }}
+				</p>
+			</div>
+		</div>
+		<div class="card-footer">
+			{{post.created_at}}
+		</div>
+		{% if post.created_at|date:"Y-m-d H:i:s" != post.updated_at|date:"Y-m-d H:i:s" %}
+		<div class="card-footer">
+			Обновлено: {{post.updated_at}}
+		</div>
+		{% endif %}
+	</div>
+</a>

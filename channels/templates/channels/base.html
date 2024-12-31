@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+	<div class="card channel-header-container {% include 'channels/include/card-class.html' %}">
+		<div class="d-flex flex-row justify-content-between g-0 p-3">
+			<a href="{% url 'channels:detail' channel.pk %}" class="w-25">
+				<img
+					class="img-fluid rounded-start"
+					src="{{channel.image.url}}"
+					alt="Логотип канала"
+					style="max-height: 300px"
+				>
+			</a>
+			<div class="card-body d-flex flex-column justify-content-between">
+				<h1 class="card-title">{{channel.name}}</h1>
+				<div class="d-flex gap-1 flex-wrap">
+					{% include 'channels/include/subscribe-button.html' %}
+					{% include 'channels/include/go-to-control.html' %}
+					{% include 'channels/include/go-to-members.html' %}
+					{% include 'channels/include/go-to-posts.html' %}
+
+					{% comment %}
+					{% include 'channels/include/go-to-quizes.html' %}
+					{% include 'channels/include/go-to-questions.html' %}
+					{% endcomment %}
+				</div>
+			</div>
+		</div>
+		{% block channel_description %}
+		{% endblock %}
+		<div class="card-footer text-body-secondary">
+			Последнее обновление: {{ channel.posts.first.updated_at }}
+		</div>
+		{% block channel_card %}
+		{% endblock %}
+	</div>
+	{% block channel_page_content %}
+	{% endblock %}
+{% endblock %}

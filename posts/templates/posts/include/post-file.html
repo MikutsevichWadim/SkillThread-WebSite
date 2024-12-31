@@ -1,0 +1,10 @@
+{% if post.file %}
+<div class="card custom-card mt-5">
+	<div class="card-header">
+		<h5 class="d-flex justify-content-center mt-1">Прикреплённый файлы</h5>
+	</div>
+	<ul class="list-group list-group-flush">
+		{% include 'posts/include/inline-file.html' %}
+	</ul>
+</div>
+{% endif %}

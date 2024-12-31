@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+	<h1>
+		{{ error_code }}
+	</h1>
+	<p>
+		{{ error_message }}
+	</p>
+	<a href="{% url 'index' %}" class="btn btn-primary">
+		На главную
+	</a>
+{% endblock %}

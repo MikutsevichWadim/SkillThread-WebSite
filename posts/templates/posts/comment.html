@@ -1,0 +1,15 @@
+<li class="list-group-item">
+	<div class="d-flex justify-content-between">
+		{% if comment.author == user %}
+			<div class="fw-bold text-primary">
+				{{comment.author}}
+			</div>
+		{% else %}
+			<div class="fw-bold">
+				{{comment.author}}
+			</div>
+		{% endif %}
+		<div class="fst-italic">{{comment.created_at}}</div>
+	</div>
+	<div>{{comment.text}}</div>
+</li>

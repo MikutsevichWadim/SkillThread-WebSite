@@ -1,0 +1,5 @@
+{% if user == channel.created_by %}
+<a href="{% url 'channels:questions' channel.id %}" class="btn btn-primary">
+	Вопросы к тестам
+</a>
+{% endif %}

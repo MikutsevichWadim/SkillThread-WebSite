@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+
+{% load channels_tags %}
+
+{% block content %}
+	<h1 class="d-flex justify-content-center mb-5">
+		{% if request.GET.q %}
+			Поиск каналов {% if request.GET.q %} по запросу "{{ request.GET.q }}" {% endif %}
+		{% else %}
+			Популярные каналы
+		{% endif %}
+	</h1>
+	{% include 'channels/search-line.html' %}
+	{% if page_obj.paginator.count and request.GET.q %}
+	<span class="mt-3 mb-5 fs-5">Результатов поиска: {{ page_obj.paginator.count }}</span>
+	{% endif %}
+	{% include 'app/include/pagination.html' %}
+	<div class="d-flex flex-column channel-list mt-3 w-100 align-items-center">
+		{% for channel in channel_list %}
+			{% show_channel_card channel user %}
+		{% empty %}
+			{% include 'app/include/not-found.html' %}
+		{% endfor %}
+	</div>
+	{% include 'app/include/pagination.html' %}
+{% endblock %}

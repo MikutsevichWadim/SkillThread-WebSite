@@ -1,0 +1,40 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+{% load posts_tags %}
+{% load app_tags %}
+
+{% block content %}
+	<div class="card custom-card">
+		<div class="card-body d-flex flex-row justify-content-between">
+			<a href="{% url 'channels:post-list' post.channel.id %}">
+				<img src="{% static 'app/img/back-svgrepo-com.svg' %}" alt="" width="45px">
+			</a>
+			<div>
+				{% include 'posts/include/go-to-update-button.html' %}
+				{% include 'posts/include/go-to-delete-button.html' %}
+			</div>
+		</div>
+	</div>
+	<div class="post-content card custom-card mt-5">
+		<div class="card-header d-flex">
+			{% show_post_icon post 50 %}
+			<h1 class="card-title ms-3">
+				{{ post.title }}
+			</h1>
+		</div>
+		<div class="card-header d-flex justify-content-between">
+			{% include 'posts/include/created-at.html' %}
+			{% include 'posts/include/updated-at.html' %}
+		</div>
+		<div class="card-body">
+			{% if post.content %}
+				{{ post.content|safe }}
+			{% else %}
+				{% include 'app/include/clean.html' %}
+			{% endif %}
+		</div>
+	</div>
+	{% include 'posts/include/post-file.html' %}
+	{% include 'posts/include/post-quiz.html' %}
+{% endblock %}

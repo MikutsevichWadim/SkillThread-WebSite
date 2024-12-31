@@ -1,0 +1,43 @@
+<a href="{{ channel.get_absolute_url }}"
+class="d-inline-block mb-3 channel-card-container">
+	{% if user == channel.created_by %}
+		<div class="card border-primary">
+	{% elif user in channel.participants.all %}
+		<div class="card border-success">
+	{% else %}
+		<div class="card">
+	{% endif %}
+		<div class="card-header d-flex justify-content-between">
+			<h5 class="card-title">
+				{{ channel.name|truncatechars:50 }}
+			</h5>
+			<div>
+				{% if user == channel.created_by %}
+					<span class="text-primary fw-bold">Автор</span>
+				{% elif user in channel.participants.all %}
+					<span class="text-success fw-bold">Участник</span>
+				{% endif %}
+			</div>
+		</div>
+		<div
+		class="d-flex flex-row justify-content-start g-0 p-3">
+			<img
+				src="{{ channel.image.url }}"
+				class="img-fluid rounded-start"
+				style="max-width: 100px"
+			>
+			<div class="col-md-8">
+				<div class="card-body">
+					<p class="card-text">
+						{{ channel.description|truncatechars:100 }}
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="card-footer d-flex justify-content-between">
+			<span>
+				Количество просмотров: {{ channel.visits_count }}
+			</span>
+		</div>
+	</div>
+</a>

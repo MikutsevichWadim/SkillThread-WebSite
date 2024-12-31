@@ -1,0 +1,17 @@
+{% load static %}
+
+{% load app_tags %}
+
+{% if user == post.channel.created_by or user in post.channel.authors %}
+
+{% if post|is_instance_of:'posts.models.AssignmentPost' %}
+
+<a href="{% url 'posts:update-assignment' post.id %}">
+	<img src="{% static 'app/img/edit.svg' %}" alt="edit" width="50px">
+</a>
+{% elif post|is_instance_of:'posts.models.LearningMaterialPost' %}
+<a href="{% url 'posts:update-learning' post.id %}">
+	<img src="{% static 'app/img/edit.svg' %}" alt="edit" width="50px">
+</a>
+{% endif %}
+{% endif %}

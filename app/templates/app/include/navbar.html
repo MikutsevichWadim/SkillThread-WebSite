@@ -1,0 +1,32 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="{% url 'index' %}">
+			<img
+				src="{% static 'app/img/brand.svg' %}"
+				alt="brand"
+				height="32"
+				class="d-inline-block align-text-top"
+			>
+			SkillThread
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Переключатель навигации">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				{% include 'users/include/navbar-dropdown.html' %}
+				{% include 'channels/include/navbar-dropdown.html' %}
+			</ul>
+			{% include 'channels/search-line.html' %}
+		</div>
+	</div>
+</nav>

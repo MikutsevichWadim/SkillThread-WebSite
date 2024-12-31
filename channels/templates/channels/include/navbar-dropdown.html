@@ -1,0 +1,22 @@
+{% if user.is_authenticated %}
+<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		Каналы
+	</a>
+	<ul class="dropdown-menu p-2">
+		<li>
+			<a href="{% url 'channels:search' %}" class="nav-link">Поиск</a>
+		</li>
+		<li>
+			<a href="{% url 'channels:of-user' %}" class="nav-link">Мои каналы</a>
+		</li>
+		<li>
+			<a href="{% url 'channels:create' %}" class="nav-link">Создать канал</a>
+		</li>
+	</ul>
+	{% else %}
+<li>
+	<a href="{% url 'channels:search' %}" class="nav-link">Поиск каналов</a>
+</li>
+{% endif %}
+</li>

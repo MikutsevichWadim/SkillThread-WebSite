@@ -1,0 +1,7 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+	{% include 'app/include/form-header.html' %}
+		{{ form.as_p }}
+	{% include 'app/include/form-footer.html' %}
+{% endblock %}

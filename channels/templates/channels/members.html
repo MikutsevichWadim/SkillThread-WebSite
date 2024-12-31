@@ -1,0 +1,32 @@
+{% extends 'channels/base.html' %}
+
+{% load users_tags %}
+
+{% block channel_page_content %}
+<div class="card custom-card border-primary text-primary">
+	<div class="card-header">
+		<h5>Автор</h5>
+	</div>
+	<ul class="list-group list-group-flush">
+		<li class="list-group-item">
+			{% show_user_inline channel.created_by %}
+		</li>
+	</ul>
+</div>
+<div class="card custom-card border-success text-success">
+	<div class="card-header">
+		<h5>Участники</h5>
+	</div>
+	<ul class="list-group list-group-flush">
+		{% for participant in channel.participants.all %}
+		<li class="list-group-item">
+			{% show_user_inline participant %}
+		</li>
+		{% empty %}
+		<li class="list-group-item">
+			<span class="opacity-50 fw-bold fs-5 d-flex justify-content-center">Здесь никого нету</span>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}

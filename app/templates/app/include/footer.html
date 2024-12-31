@@ -1,0 +1,44 @@
+<div class="container">
+	<footer class="py-5">
+		<div class="row">
+
+			<div class="col-6 col-md-3 mb-3">
+				<h5>Обзор</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-body-secondary">О сайте</a></li>
+					<li class="nav-item mb-2"><a href="{% url 'channels:about' %}" class="nav-link p-0 text-body-secondary">О каналах</a></li>
+				</ul>
+			</div>
+
+			<div class="col-6 col-md-3 mb-3">
+				<h5>Контакты</h5>
+				<ul class="nav flex-column">
+					<li class="nav-item mb-2">Микуцевич Вадим</li>
+					<li class="nav-item mb-2">г. Гродно</li>
+					<li class="nav-item mb-2">+375 (##) ###-##-##</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+			<p>© 2024 Company. Все права защищены.</p>
+			<ul class="list-unstyled d-flex">
+				<li class="ms-3"><a class="link-body-emphasis" href="#">
+					<svg class="bi" width="24" height="24">
+						<use xlink:href="#twitter"></use>
+					</svg>
+				</a></li>
+				<li class="ms-3"><a class="link-body-emphasis" href="#">
+					<svg class="bi" width="24" height="24">
+						<use xlink:href="#instagram"></use>
+					</svg>
+				</a></li>
+				<li class="ms-3"><a class="link-body-emphasis" href="#">
+					<svg class="bi" width="24" height="24">
+						<use xlink:href="#facebook"></use>
+					</svg>
+				</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>

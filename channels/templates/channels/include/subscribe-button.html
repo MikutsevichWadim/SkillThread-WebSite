@@ -1,0 +1,11 @@
+{% if user not in channel.participants.all and user != channel.created_by %}
+	<form method="post" action="{% url 'channels:subscribe' channel.id %}">
+		{% csrf_token %}
+		<button type="submit" class="btn btn-primary">Подписаться</button>
+	</form>
+{% elif user in channel.participants.all %}
+	<form method="post" action="{% url 'channels:unsubscribe' channel.id %}">
+		{% csrf_token %}
+		<button type="submit" class="btn btn-secondary">Отписаться</button>
+	</form>
+{% endif %}

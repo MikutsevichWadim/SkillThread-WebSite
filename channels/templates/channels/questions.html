@@ -1,0 +1,29 @@
+{% extends 'channels/base.html' %}
+
+{% load posts_tags %}
+
+{% block channel_content_title %}
+Содержимое канала
+{% endblock %}
+
+{% block channel_page_content %}
+<div class="d-flex justify-content-between flex-row m-3 gap-5">
+	<h1>
+		Вопросы к тестам
+	</h1>
+	{% if request.user == channel.created_by %}
+	<a href="{% url 'question:create' channel.id %}" class="btn btn-primary">
+		Создать вопрос
+	</a>
+	{% endif %}
+</div>
+<div class="d-flex flex-column post-list w-100 align-items-center justify-content-center">
+	{% include 'app/include/pagination.html' %}
+	{% for post in page_obj.object_list %}
+	{% show_post_card post %}
+	{% empty %}
+	{% include 'app/include/clean.html' %}
+	{% endfor %}
+	{% include 'app/include/pagination.html' %}
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% if user in channel.participants.all or user in channel.authors.all or user == channel.created_by %}
+	<a
+		href="{% url 'channels:members' channel.pk %}"
+		class="btn btn-primary"
+	>
+		Список участников
+	</a>
+{% endif %}

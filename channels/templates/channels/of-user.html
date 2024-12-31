@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+
+{% load channels_tags %}
+
+{% block content %}
+	<p><h1>Мои каналы</h1></p>
+	<p><h2 class="text-primary">Авторство</h2></p>
+	{% for channel in request.user.created_channels.all %}
+		{% show_channel_card channel user %}
+	{% empty %}
+		<p>Начните делиться своими знаниями:</p>
+		<p><a href="{% url 'channels:create' %}" class="btn btn-primary">Создать свой первый канал</a></p>
+	{% endfor %}
+	<p><h2 class="text-success">Участие</h2></p>
+	{% for channel in request.user.participant_channels.all %}
+		{% show_channel_card channel user %}
+	{% empty %}
+		<p>Начните впитывать "поток умений" от профессионалов:</p>
+		<p><a href="{% url 'channels:create' %}" class="btn btn-primary">Найти канал</a></p>
+	{% endfor %}
+{% endblock %}

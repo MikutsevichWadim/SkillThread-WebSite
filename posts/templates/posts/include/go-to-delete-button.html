@@ -1,0 +1,7 @@
+{% load static %}
+
+{% if user == post.channel.created_by or user in post.channel.authors %}
+<a href="{% url 'posts:delete' post.id %}">
+	<img src="{% static 'app/img/trash.svg' %}" alt="edit" width="50px">
+</a>
+{% endif %}

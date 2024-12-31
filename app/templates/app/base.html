@@ -1,0 +1,37 @@
+{% load static %}
+
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta
+		name='viewport'
+		content='width=device-width, initial-scale=1'
+	>
+	<title>
+		{% block title %}
+		SkillThread
+		{% endblock %}
+	</title>
+	{% include 'app/include/bootstrap-link.html' %}
+	{% include 'app/include/google-fonts.html' %}
+	{% include 'app/include/favicon.html' %}
+	<link rel="stylesheet" href="{% static 'app/css/style.css' %}" type="text/css">
+</head>
+<body>
+	{% include 'app/include/messages.html' %}
+	<header class="sticky-top">
+		{% include 'app/include/navbar.html' %}
+		{% block header %}
+		{% endblock %}
+	</header>
+	<div class="content m-5 d-flex flex-column align-items-center">
+		{% block content %}
+		{% endblock %}
+	</div>
+	{% include 'app/include/footer.html' %}
+
+	{% include 'app/include/main-js-script.html' %}
+	{% include 'app/include/bootstrap-script.html' %}
+</body>
+</html>

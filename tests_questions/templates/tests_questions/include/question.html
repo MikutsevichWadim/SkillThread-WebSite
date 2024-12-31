@@ -1,0 +1,22 @@
+<div id="templates" class="d-none">
+	<!-- Шаблон вопроса -->
+	<div class="card mb-3 question-template">
+		<div class="card-body">
+			<button type="button" class="btn-close float-end removeQuestion" aria-label="Close"></button>
+			<div class="mb-3">
+				<label class="form-label">Текст вопроса</label>
+				<input type="text" class="form-control question-text" placeholder="Введите текст вопроса" required>
+			</div>
+
+			<div class="mb-3 answer-options">
+				<label class="form-label">Варианты ответа</label>
+				<div class="input-group mb-2 answer-template">
+					<input type="text" class="form-control answer-text" placeholder="Введите вариант ответа">
+					<input type="radio" class="correct-option" aria-label="Correct Answer">
+					<button type="button" class="btn btn-outline-danger removeOption">Удалить</button>
+				</div>
+			</div>
+			<button type="button" class="btn btn-outline-success addOption">Добавить вариант</button>
+		</div>
+	</div>
+</div>

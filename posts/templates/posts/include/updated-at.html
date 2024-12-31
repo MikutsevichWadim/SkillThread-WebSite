@@ -1,0 +1,6 @@
+{% if post.created_at|date:"Y-m-d H:i:s" != post.updated_at|date:"Y-m-d H:i:s" %}
+<div>
+	<div><b>Обновлено:</b></div>
+	<div>{{ post.updated_at }}</div>
+</div>
+{% endif %}

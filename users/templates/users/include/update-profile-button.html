@@ -1,0 +1,3 @@
+{% if request.user == object %}
+	<a href="{% url 'users:update' user.pk %}" class="btn btn-primary">Изменить профиль</a>
+{% endif %}

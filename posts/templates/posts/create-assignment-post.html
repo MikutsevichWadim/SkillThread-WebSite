@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+
+{% load app_tags %}
+
+{% block content %}
+	<h1>Создание поста</h1>
+	{% include 'app/include/form-header.html' %}
+	{{ form }}
+	{% show_form_footer 'Создать' %}
+{% endblock %}

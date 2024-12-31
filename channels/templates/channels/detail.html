@@ -1,0 +1,19 @@
+{% extends 'channels/base.html' %}
+
+{% load posts_tags %}
+
+{% block channel_description %}
+	{% if channel.description %}
+	<div class="card-footer text-body-secondary">
+		{{ channel.description }}
+	</div>
+	{% endif %}
+{% endblock %}
+
+{% comment %}
+{% block channel_page_content %}
+	<div class="card custom-card">
+
+	</div>
+{% endblock %}
+{% endcomment %}
