@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ab4934d-220a-4709-8677-2ee6483ddcdb" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/app/static/app/img/up-arrow-hand-drawn-outline-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/channels/image/up-arrow-hand-drawn-outline-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/templates/cookie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/templates/session.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scia/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SkillThread.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SkillThread.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/app/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/templates/channels/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/channels/templates/channels/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillthread/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/skillthread/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skillthread/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/skillthread/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MikutsevichWadim&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MikutsevichWadim/SkillThread-WebSite.git&quot;,
+    &quot;accountId&quot;: &quot;ab6eb289-6a9a-4a90-bf4d-2513debb8f9c&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2q57kWpetnXaeNl26qp2ghat477" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.collectstatic.executor": "Run",
+    "Python.createsuperuser.executor": "Run",
+    "Python.export_modules.executor": "Run",
+    "Python.makemigrations.executor": "Run",
+    "Python.migrate.executor": "Run",
+    "Python.runserver.executor": "Run",
+    "Python.shell.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "<unknown>",
+    "last_opened_file_path": "C:/Users/USER/Desktop/SkillThread/users",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\SkillThread\users" />
+      <recent name="C:\Users\USER\Desktop\SkillThread" />
+      <recent name="C:\Users\USER\Desktop\SkillThread\tests_tests" />
+      <recent name="C:\Users\USER\Desktop\SkillThread\tests_questions" />
+      <recent name="C:\Users\USER\Desktop\SkillThread\tests_answers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mikut\PyCharmProjects\SkillThread\scia\templates" />
+      <recent name="C:\Users\mikut\PyCharmProjects\SkillThread\tests_questions\templates\tests_questions\include" />
+      <recent name="C:\Users\mikut\PyCharmProjects\SkillThread\tests_questions\templates\tests_questions" />
+      <recent name="C:\Users\mikut\PyCharmProjects\SkillThread\tests_questions\templates" />
+      <recent name="C:\Users\mikut\PyCharmProjects\SkillThread\tests_tests\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.runserver">
+    <configuration name="collectstatic" type="PythonConfigurationType" factoryName="Python">
+      <module name="SkillThread" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="manage.py" />
+      <option name="PARAMETERS" value="collectstatic" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="makemigrations" type="PythonConfigurationType" factoryName="Python">
+      <module name="SkillThread" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13 virtualenv at C:\Users\USER\Desktop\SkillThread\.venv" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="manage.py" />
+      <option name="PARAMETERS" value="makemigrations" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="migrate" type="PythonConfigurationType" factoryName="Python">
+      <module name="SkillThread" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="manage.py" />
+      <option name="PARAMETERS" value="migrate" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runserver" type="PythonConfigurationType" factoryName="Python">
+      <module name="SkillThread" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="shell" type="PythonConfigurationType" factoryName="Python">
+      <module name="SkillThread" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="manage.py" />
+      <option name="PARAMETERS" value="shell_plus --print-sql" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.collectstatic" />
+      <item itemvalue="Python.makemigrations" />
+      <item itemvalue="Python.migrate" />
+      <item itemvalue="Python.runserver" />
+      <item itemvalue="Python.shell" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
+        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ab4934d-220a-4709-8677-2ee6483ddcdb" name="Changes" comment="" />
+      <created>1733940725382</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733940725382</updated>
+      <workItem from="1736857988010" duration="86000" />
+      <workItem from="1736858085682" duration="11000" />
+      <workItem from="1736875832097" duration="40000" />
+      <workItem from="1736932313615" duration="197000" />
+      <workItem from="1737112296286" duration="427000" />
+      <workItem from="1737112750672" duration="15000" />
+      <workItem from="1737526906086" duration="4429000" />
+      <workItem from="1737542807723" duration="578000" />
+      <workItem from="1737625182422" duration="22000" />
+      <workItem from="1737920755698" duration="423000" />
+      <workItem from="1737964701150" duration="23000" />
+      <workItem from="1741088678810" duration="4474000" />
+      <workItem from="1741095829697" duration="10000" />
+      <workItem from="1741103436973" duration="6329000" />
+    </task>
+    <task id="LOCAL-00001" summary=".">
+      <option name="closed" value="true" />
+      <created>1735635240591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735635240591</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SkillThread$export_modules.coverage" NAME="export_modules Coverage Results" MODIFIED="1741105123825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/users" />
+    <SUITE FILE_PATH="coverage/SkillThread$makemigrations.coverage" NAME="makemigrations Coverage Results" MODIFIED="1741092801290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/SkillThread$test.coverage" NAME="test Coverage Results" MODIFIED="1741105881327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SkillThread$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1741107342932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
