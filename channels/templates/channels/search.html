@@ -1,5 +1,6 @@
 {% extends 'app/base.html' %}
 
+{% load static %}
 {% load channels_tags %}
 
 {% block content %}
@@ -23,4 +24,6 @@
 		{% endfor %}
 	</div>
 	{% include 'app/include/pagination.html' %}
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><img
+		src="{% static 'app/img/up-arrow-hand-drawn-outline-svgrepo-com.svg' %}" alt="to top" class="img-fluid"></button>
 {% endblock %}

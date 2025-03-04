@@ -47,6 +47,12 @@ urlpatterns = [
 			namespace='tests',
 		),
 	),
+	path(
+		route='',
+		view=include(
+			arg='scia.urls',
+		),
+	),
 ]
 
 if settings.DEBUG:

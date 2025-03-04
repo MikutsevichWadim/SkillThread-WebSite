@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Работа с сессией</title>
+</head>
+<body>
+<h1>Работа с сессией</h1>
+
+<form id="sessionForm">
+	{% csrf_token %}
+	<label for="session_value">Значение сессии:</label>
+	<input type="text" id="session_value" name="session_value" required>
+	<button type="submit">Установить сессию</button>
+</form>
+
+<button onclick="getSession()">Получить сессию</button>
+<button onclick="deleteSession()">Удалить сессию</button>
+
+<p id="result"></p>
+
+<script>
+	// Установка сессии через AJAX
+	document.getElementById('sessionForm').addEventListener('submit', function (event) {
+		event.preventDefault();
+
+		const sessionValue = document.getElementById('session_value').value;
+
+		fetch('/session/', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'X-CSRFToken': '{{ csrf_token }}'
+			},
+			body: JSON.stringify({ session_value: sessionValue })
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(`Ошибка: ${response.status}`);
+				}
+				return response.json();
+			})
+			.then(data => {
+				document.getElementById('result').innerText = data.message;
+			})
+			.catch(error => {
+				console.error('Ошибка при установке сессии:', error);
+				document.getElementById('result').innerText = 'Не удалось установить сессию.';
+			});
+	});
+
+	// Получение сессии
+	function getSession() {
+		fetch('/session/', {
+			method: 'GET',
+			headers: {
+				'X-Requested-With': 'XMLHttpRequest'
+			}
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(`Ошибка: ${response.status}`);
+				}
+				return response.json();
+			})
+			.then(data => {
+				document.getElementById('result').innerText = `Значение сессии: ${data.session_value}`;
+			})
+			.catch(error => {
+				console.error('Ошибка при получении сессии:', error);
+				document.getElementById('result').innerText = 'Не удалось получить сессию.';
+			});
+	}
+
+	// Удаление сессии
+	function deleteSession() {
+		fetch('/session/', {
+			method: 'DELETE',
+			headers: {
+				'X-CSRFToken': '{{ csrf_token }}'
+			}
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(`Ошибка: ${response.status}`);
+				}
+				return response.json();
+			})
+			.then(data => {
+				document.getElementById('result').innerText = data.message;
+			})
+			.catch(error => {
+				console.error('Ошибка при удалении сессии:', error);
+				document.getElementById('result').innerText = 'Не удалось удалить сессию.';
+			});
+	}
+</script>
+</body>
+</html>

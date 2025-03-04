@@ -31,7 +31,7 @@ class LoginUserForm(
 			},
 		),
 	)
-	
+
 
 class RegisterUserForm(
 	UserCreationForm,
@@ -101,8 +101,9 @@ class RegisterUserForm(
 				message='Такой электронный адрес уже используется',
 			)
 		return email
-	
-	
+
+
+
 class CustomPasswordChangeForm(
 	PasswordChangeForm,
 ):
@@ -133,7 +134,7 @@ class CustomPasswordChangeForm(
 			}
 		),
 	)
-	
+
 class UpdateUserForm(
 	UserChangeForm,
 ):

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Работа с куки</title>
+</head>
+<body>
+<h1>Работа с куки</h1>
+
+<form id="cookieForm">
+	{% csrf_token %}
+	<label for="cookie_value">Значение куки:</label>
+	<input type="text" id="cookie_value" name="cookie_value" required>
+	<button type="submit">Установить куки</button>
+</form>
+
+<button onclick="getCookie()">Получить куки</button>
+<button onclick="deleteCookie()">Удалить куки</button>
+
+<p id="result"></p>
+
+<script>
+	// Установка куки через AJAX
+	document.getElementById('cookieForm').addEventListener('submit', function (event) {
+		event.preventDefault();
+
+		const cookieValue = document.getElementById('cookie_value').value;
+
+		fetch('/cookie/', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'X-CSRFToken': '{{ csrf_token }}'
+			},
+			body: JSON.stringify({ cookie_value: cookieValue })
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(`Ошибка: ${response.status}`);
+				}
+				return response.json();
+			})
+			.then(data => {
+				document.getElementById('result').innerText = data.message;
+			})
+			.catch(error => {
+				console.error('Ошибка при установке куки:', error);
+				document.getElementById('result').innerText = 'Не удалось установить куки.';
+			});
+	});
+
+	// Получение куки
+	function getCookie() {
+		fetch('/cookie/', {
+			method: 'GET',
+			headers: {
+				'X-Requested-With': 'XMLHttpRequest'
+			}
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(`Ошибка: ${response.status}`);
+				}
+				return response.json();
+			})
+			.then(data => {
+				document.getElementById('result').innerText = `Значение куки: ${data.cookie_value}`;
+			})
+			.catch(error => {
+				console.error('Ошибка при получении куки:', error);
+				document.getElementById('result').innerText = 'Не удалось получить куки.';
+			});
+	}
+
+	// Удаление куки
+	function deleteCookie() {
+		fetch('/cookie/delete/', {
+			method: 'POST',
+			headers: {
+				'X-CSRFToken': '{{ csrf_token }}'
+			}
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(`Ошибка: ${response.status}`);
+				}
+				return response.json();
+			})
+			.then(data => {
+				document.getElementById('result').innerText = data.message;
+			})
+			.catch(error => {
+				console.error('Ошибка при удалении куки:', error);
+				document.getElementById('result').innerText = 'Не удалось удалить куки.';
+			});
+	}
+</script>
+</body>
+</html>

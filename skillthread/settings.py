@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-g&trgb5_5g(7+dxwf%=wyz581o6r$ee%$%&b4+n+%_f@@&5i1$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -31,6 +31,7 @@ INSTALLED_APPS = [
 	'users',
 	'channels',
 	'posts',
+	'scia',
 	'tests_tests',
 	'tests_questions',
 	'tests_answers',
@@ -139,3 +140,15 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
 
 AUTH_USER_MODEL = 'users.User'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # Or another backend
+EMAIL_HOST = 'smtp.yandex.ru'  # Replace
+EMAIL_PORT = 465  # Or 465, etc.
+# EMAIL_USE_TLS = True  # Or EMAIL_USE_SSL = True (but not both)
+EMAIL_USE_SSL = True  # Or EMAIL_USE_SSL = True (but not both)
+EMAIL_HOST_USER = 'mikutsevich.wadim@yandex.ru'  # Replace
+EMAIL_HOST_PASSWORD = '***'  # Replace
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL = EMAIL_HOST_USER
+EMAIL_ADMIN = EMAIL_HOST_USER

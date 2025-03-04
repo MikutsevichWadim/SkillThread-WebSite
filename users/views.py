@@ -12,6 +12,7 @@ from django.contrib.auth.views import (
 	PasswordChangeDoneView,
 	PasswordChangeView,
 )
+from django.core.mail import send_mail  # Import send_mail
 from django.http import (
 	HttpRequest,
 	HttpResponse,
@@ -31,6 +32,7 @@ from django.views.generic import (
 )
 
 from channels.models import Channel
+from skillthread import settings
 from . import forms
 from .forms import (
 	CustomPasswordChangeForm,
@@ -60,11 +62,37 @@ class RegisterUser(
 		'submit_button_inner': 'Создать аккаунт',
 	}
 	
+	def form_invalid(self, form):
+		email = form.data.get('email')
+		
+		# Check if email already exists
+		if get_user_model().objects.filter(email=email).exists():
+			
+			messages.error(self.request, 'Такой электронный адрес уже используется')
+		
+		return super().form_invalid(form)
+	
+	
+	
 	def get_success_url(self):
 		messages.success(
 			request=self.request,
 			message='Вы успешно зарегистрированы!',
 		)
+	
+		# Access the validated email from the form's cleaned_data
+		email = self.request.POST.get('email')  # Access the email from the request POST data (safe fallback)
+		
+		subject = 'Привет'
+		message = 'Добро пожаловать на наш сайт'
+		from_email = settings.EMAIL_HOST_USER  # Replace with your "from" email address
+		recipient_list = [email]
+		
+		try:
+			send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+		except Exception as e:
+			messages.error(self.request, f"Ошибка отправки письма: {e}")  # Log the error
+		
 		return super().get_success_url()
 
 
@@ -74,7 +102,7 @@ class UserDetailView(
 ):
 	model = get_user_model()
 	template_name = 'users/detail.html'
-	
+
 
 class UserUpdateView(
 	LoginRequiredMixin,
@@ -101,7 +129,7 @@ class UserUpdateView(
 				'pk': self.object.pk,
 			}
 		)
-	
+
 
 class CustomPasswordChangeView(
 	LoginRequiredMixin,
